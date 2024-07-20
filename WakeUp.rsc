@@ -11,7 +11,6 @@ $text\
 %0a$[/system identity get name]\
 %0aModel $[/system routerboard get model]\
 %0aBoard-name $[/system resource get board-name]\ 
-%0aSerial-number $[/system routerboard get serial-number]\
 %0aFactory-firmware $[/system routerboard get factory-firmware]\
 %0aCurrent-firmware  $[/system routerboard get current-firmware]\
 %0aUpgrade-firmware $[/system routerboard get upgrade-firmware]\
