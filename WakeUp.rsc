@@ -10,8 +10,9 @@
 $text\
 %0a$[/system identity get name]\
 %0aModel $[/system routerboard get model]\
-%0aBoard name $[/system resource get board-name]\ 
-%0aVersion factory $[/system routerboard get factory-firmware]\
-%0aVersion current  $[/system routerboard get current-firmware]\
-%0aVersion upgrade $[/system routerboard get upgrade-firmware]\
+%0aBoard-name $[/system resource get board-name]\ 
+%0aSerial-number $[/system routerboard get serial-number]\
+%0aFactory-firmware $[/system routerboard get factory-firmware]\
+%0aCurrent-firmware  $[/system routerboard get current-firmware]\
+%0aUpgrade-firmware $[/system routerboard get upgrade-firmware]\
 %0a%23$Tag_$[/system identity get name]" keep-result=no;
