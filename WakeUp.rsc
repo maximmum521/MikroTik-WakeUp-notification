@@ -2,8 +2,8 @@
 #####
 # setings telegram boot
 #####
-:local BotId "1654708951:AAGwwuzZKQnn-khZJOLpF4QqlCyi5PIJ6dQ";
-:local ChatId "352670694";
+:local BotId "***************";
+:local ChatId "********";
 #####
 # CHECK ETHERNET FUNCTION
 #####
