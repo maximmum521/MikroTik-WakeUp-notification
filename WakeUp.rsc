@@ -1,11 +1,35 @@
-:delay 120;
+:log info "Run WakeUP script";
+#####
+# setings telegram boot
+#####
+:local BotId "1654708951:AAGwwuzZKQnn-khZJOLpF4QqlCyi5PIJ6dQ";
+:local ChatId "352670694";
+#####
+# CHECK ETHERNET FUNCTION
+#####
+:global funChekUP do={ 
+:do { 
+:delay 5;
+:log info "ping google";
+:local tmp;
+:set $tmp [/ping google.com count=8];
+:if ( $tmp > 4 ) do={
+:log info "Ethernet UP";
+} else={
+:log info "Ethernet DOWN";
+:delay 15;
+$funChekUP;
+} } on-error={ 
+:log info "Failure";
+:delay 15s;
+$funChekUP;
+} };
+$funChekUP;
 #####
 :local text "ROUTER WAKE UP";
 :local Tag "Wake_Up"
-/system script run ScriptSetings;
-:global BotId;
-:global ChatId;
 ######
+:log info "SEND MESSAGES";
 /tool fetch url="https://api.telegram.org/bot$BotId/sendMessage\?chat_id=$ChatId&text=\
 $text\
 %0a$[/system identity get name]\
@@ -15,3 +39,4 @@ $text\
 %0aCurrent-firmware  $[/system routerboard get current-firmware]\
 %0aUpgrade-firmware $[/system routerboard get upgrade-firmware]\
 %0a%23$Tag_$[/system identity get name]" keep-result=no;
+/system/script/environment/remove funChekUP;
