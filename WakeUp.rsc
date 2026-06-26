@@ -32,11 +32,10 @@ $funChekUP;
 :log info "SEND MESSAGES";
 /tool fetch url="https://api.telegram.org/bot$BotId/sendMessage\?chat_id=$ChatId&text=\
 $text\
-%0a$[/system identity get name]\
-%0aModel $[/system routerboard get model]\
-%0aBoard-name $[/system resource get board-name]\ 
-%0aFactory-firmware $[/system routerboard get factory-firmware]\
-%0aCurrent-firmware  $[/system routerboard get current-firmware]\
-%0aUpgrade-firmware $[/system routerboard get upgrade-firmware]\
-%0a%23$Tag_$[/system identity get name]" http-percent-encoding=yes keep-result=no;
-/system/script/environment/remove funChekUP;
+$[/system identity get name]\
+\nModel $[/system routerboard get model]\
+\nBoard-name $[/system resource get board-name]\ 
+\nFactory-firmware $[/system routerboard get factory-firmware]\
+\nCurrent-firmware  $[/system routerboard get current-firmware]\
+\nUpgrade-firmware $[/system routerboard get upgrade-firmware]\
+\n#$Tag $[/system identity get name]" http-percent-encoding=yes keep-result=no;
