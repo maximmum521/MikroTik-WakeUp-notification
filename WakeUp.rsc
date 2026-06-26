@@ -39,3 +39,4 @@ $[/system identity get name]\
 \nCurrent-firmware  $[/system routerboard get current-firmware]\
 \nUpgrade-firmware $[/system routerboard get upgrade-firmware]\
 \n#$Tag #$[/system identity get name]" http-percent-encoding=yes keep-result=no;
+/system/script/environment/remove funChekUP;
