@@ -38,5 +38,5 @@ $text\
 %0aFactory-firmware $[/system routerboard get factory-firmware]\
 %0aCurrent-firmware  $[/system routerboard get current-firmware]\
 %0aUpgrade-firmware $[/system routerboard get upgrade-firmware]\
-%0a%23$Tag_$[/system identity get name]" keep-result=no;
+%0a%23$Tag_$[/system identity get name]" http-percent-encoding=yes keep-result=no;
 /system/script/environment/remove funChekUP;
