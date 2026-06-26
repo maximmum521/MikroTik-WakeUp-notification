@@ -38,4 +38,4 @@ $[/system identity get name]\
 \nFactory-firmware $[/system routerboard get factory-firmware]\
 \nCurrent-firmware  $[/system routerboard get current-firmware]\
 \nUpgrade-firmware $[/system routerboard get upgrade-firmware]\
-\n#$Tag $[/system identity get name]" http-percent-encoding=yes keep-result=no;
+\n#$Tag #$[/system identity get name]" http-percent-encoding=yes keep-result=no;
